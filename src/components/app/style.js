@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     color: ${(props) => props.theme.colorWhite};
     background-color: ${(props) => props.theme.colorBlack};
-    scrollbar-color: rgba(${(props) => props.theme.colorPurple}, 0.5) rgba(${(props) => props.theme.colorPurple}, 0.2);
+    scrollbar-color: rgba(131, 58, 180, 0.5) rgba(131, 58, 180, 0.2);
     scrollbar-width: thin;
 
     &::-webkit-scrollbar {
@@ -27,14 +27,14 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     &::-webkit-scrollbar-track-piece {
-      background-color: rgba(${(props) => props.theme.colorPurple}, 0.2);
+      background-color: rgba(131, 58, 180, 0.2);
       border-radius: 10px;
       width: 10px;
     }
 
     &::-webkit-scrollbar-thumb:vertical {
       height: 30px;
-      background-color: rgba(${(props) => props.theme.colorPurple}, 0.5);
+      background-color: rgba(131, 58, 180, 0.5);
       border-radius: 10px;
     }
   }

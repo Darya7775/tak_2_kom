@@ -29,7 +29,7 @@ export const ContainerStyle = styled(Container)`
     gap: 27px;
   }
 
-  .WuXpE {
+  .social {
     margin-bottom: 18px;
     gap: 10px;
 

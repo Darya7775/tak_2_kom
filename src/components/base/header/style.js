@@ -17,7 +17,7 @@ export const ContainerStyle = styled(Container)`
   padding-bottom: 50px;
   gap: 20px;
 
-  .WuXpE {
+  .social {
     column-gap: 28px;
     row-gap: 10px;
 

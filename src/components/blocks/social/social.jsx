@@ -10,7 +10,7 @@ function Social({ social }) {
   const { telegram, viber, whatsapp } = social;
 
   return(
-    <SocialStyle>
+    <SocialStyle className="social">
       <li>
         <LinkSocial href="#">
           <img src={Telegram} alt="telegram" width={telegram.width} height={telegram.height} />
