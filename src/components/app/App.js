@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "/src/components/base/layout/layout";
 import Main from "/src/components/page/main/main";
 
@@ -8,7 +8,7 @@ import { GlobalFonts } from "/src/fonts/fonts";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalFonts />
       <GlobalStyles />
       <Routes>
@@ -16,6 +16,6 @@ export default function App() {
           <Route index element={<Main />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
