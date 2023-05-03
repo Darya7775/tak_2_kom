@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "author": "Stolyarova Darya",
-  "homepage": "https://darya7775.github.io/task_2_kom/",
+  "homepage": "https://darya7775.github.io/task_2_kom",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack server --mode development",
