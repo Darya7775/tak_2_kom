@@ -1,12 +1,12 @@
 import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Layout from "/src/components/base/layout/layout";
-import Main from "/src/components/page/main/main";
+import Layout from "../base/layout";
+import Main from "../page/main";
 
 import { GlobalStyles } from "./style";
-import { GlobalFonts } from "/src/fonts/fonts";
+import { GlobalFonts } from "../../fonts/fonts";
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <HashRouter>
       <GlobalFonts />
@@ -19,3 +19,5 @@ export default function App() {
     </HashRouter>
   );
 }
+
+export default App;

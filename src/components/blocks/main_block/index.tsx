@@ -1,10 +1,9 @@
 import React from "react";
-import { useMactchMedia } from "/src/hooks/use_match_media";
-
+import { useMactchMedia } from "../../../hooks/use-match-media";
 import * as S from "./style";
 
-function MainBlock() {
-  const {isMobile} = useMactchMedia();
+const MainBlock: React.FC = () => {
+  const {isMobile} = useMactchMedia() as {isMobile: boolean};
 
   return(
     <S.MainStyle>

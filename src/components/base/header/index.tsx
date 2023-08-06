@@ -1,13 +1,10 @@
 import React from "react";
-
 import LogoImg from "/src/assets/svg/logo_welbex.svg";
-
-import Nav from "/src/components/blocks/nav/nav";
-import Social from "/src/components/blocks/social/social";
-
+import Nav from "../../blocks/nav";
+import Social from "../../blocks/social";
 import * as S from "./style";
 
-function Header() {
+const Header: React.FC = () => {
   const social = {
     telegram: { width: 20, height: 20 },
     viber: { width: 20, height: 19 },

@@ -2,11 +2,11 @@ import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "styled-components";
 
-import App from "/src/components/app/App";
-import { theme } from "/src/components/theme/theme";
+import App from "./components/app";
+import { theme } from "./components/theme/theme";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const container = document.getElementById('root');
+const root = createRoot(container!);
 
 root.render(
   <StrictMode>

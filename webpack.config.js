@@ -1,12 +1,12 @@
+/*global require, module, __dirname, process*/
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: { main: path.resolve(__dirname, './src/index.js') },
+  entry: { main: path.resolve(__dirname, './src/index.tsx') },
   output: {
     path: path.resolve(__dirname, './build'),
     filename: production ? '[name].[contenthash].js' : '[name].js',
@@ -23,16 +23,22 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /(.png|((?<!.cmp).svg)|.jpg|.webp|.gif|.woff|.woff2|.eot|.ttf|.otf)$/,
-        use: [
-          'file-loader',
-          'webp-loader'
-        ],
+        test: /\.(ts|tsx)$/,
+        use: ['ts-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: 'asset/resource',
       },
     ],
   },
   resolve: {
-    extensions: ['.jsx', '.js'],
+    extensions: ['.jsx', '.tsx', '.ts', '.js'],
     alias: {
       src: path.resolve(__dirname, 'src'),
     }
@@ -56,3 +62,12 @@ module.exports = {
   },
   mode: production ? 'production' : 'development'
 };
+
+
+// {
+//   test: /(.png|((?<!.cmp).svg)|.jpg|.webp|.gif|.woff|.woff2|.eot|.ttf|.otf)$/,
+//   use: [
+//     'file-loader',
+//     'webp-loader'
+//   ],
+// },

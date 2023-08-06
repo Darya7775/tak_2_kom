@@ -1,12 +1,27 @@
 import React from "react";
-
 import Telegram from "/src/assets/svg/telegram.svg";
 import Viber from "/src/assets/svg/viber.svg";
 import Whatsapp from "/src/assets/svg/whatsapp.svg";
-
 import { SocialStyle, LinkSocial } from "./style";
 
-function Social({ social }) {
+interface Props {
+  social: {
+    telegram: {
+      width: number;
+      height: number;
+    };
+    viber: {
+        width: number;
+        height: number;
+    };
+    whatsapp: {
+        width: number;
+        height: number;
+    };
+  }
+}
+
+const Social: React.FC<Props> = ({ social }: Props) => {
   const { telegram, viber, whatsapp } = social;
 
   return(

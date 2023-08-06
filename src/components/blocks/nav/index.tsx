@@ -1,8 +1,7 @@
 import React from "react";
-
 import { NavStyle, NavListStyle, LinkStyle } from "./style";
 
-function Nav() {
+const Nav: React.FC = () => {
   return(
     <NavStyle>
       <NavListStyle>

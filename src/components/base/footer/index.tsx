@@ -1,13 +1,27 @@
 import React from "react";
-import { useMactchMedia } from "/src/hooks/use_match_media";
-
-import Social from "/src/components/blocks/social/social";
+import { useMactchMedia } from "../../../hooks/use-match-media";
+import Social from "../../blocks/social";
 import * as S from "./style";
 
-function Footer() {
-  const {isMobile} = useMactchMedia();
+interface Social {
+  telegram: {
+    width: number;
+    height: number;
+  },
+  viber: {
+    width: number;
+    height: number;
+  },
+  whatsapp: {
+    width: number;
+    height: number;
+  },
+}
 
-  let social;
+const Footer: React.FC = () =>  {
+  const {isMobile} = useMactchMedia() as {isMobile: boolean};
+
+  let social: Social;
 
   if(isMobile) {
     social = {
@@ -22,7 +36,6 @@ function Footer() {
       whatsapp: {width: 20, height: 20},
     };
   }
-
 
   return(
     <S.FooterStyle>
@@ -79,7 +92,7 @@ function Footer() {
             <S.Tel href="tel:+75555555555">+7 555 555-55-55</S.Tel>
           </S.WrapperTel>
           <Social social={social} />
-          <S.Address>Москва, Путевой проезд 3с1, к 902</S.Address>
+          <S.Address>Москва, Путевой проезд 3c1, к 902</S.Address>
         </S.WrapperContacts>
         <S.WrapperCopyright>
           <S.Copyright>©WELBEX 2022. Все права защищены.</S.Copyright>

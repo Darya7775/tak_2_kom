@@ -1,8 +1,8 @@
 import React from "react";
 
-import MainBlock from "/src/components/blocks/main_block/main_block";
+import MainBlock from "../../../components/blocks/main_block";
 
-function Main() {
+const Main: React.FC = () => {
   return (
     <main>
       <MainBlock />
