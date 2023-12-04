@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import MainBlock from "../../../components/blocks/main_block";
 
@@ -10,4 +10,4 @@ const Main: React.FC = () => {
   );
 }
 
-export default Main;
+export default memo(Main);

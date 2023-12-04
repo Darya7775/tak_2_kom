@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
-import bg from "/src/assets/bg.png";
-import bg2x from "/src/assets/bg@2x.png";
+import bg from "../assets/bg.png";
+import bg2x from "../assets/bg@2x.png";
 
 export const Background = css`
   background-image: url(${bg});
@@ -55,4 +55,22 @@ export const Inter900 = css`
   font-family: ${props => props.theme.ffInter};
   font-style: normal;
   font-weight: 900;
+`;
+
+export const itemState = css`
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 1s;
+    }
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: ${props => props.theme.colorPurple};
+    transition: color 1s;
+  }
 `;

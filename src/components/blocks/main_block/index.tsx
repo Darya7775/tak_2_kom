@@ -1,6 +1,6 @@
-import React from "react";
-import { useMactchMedia } from "../../../hooks/use-match-media";
-import * as S from "./style";
+import React, { memo } from "react";
+import useMactchMedia from "../../../hooks/use-match-media";
+import * as S from "./styles";
 
 const MainBlock: React.FC = () => {
   const {isMobile} = useMactchMedia() as {isMobile: boolean};
@@ -60,4 +60,4 @@ const MainBlock: React.FC = () => {
   );
 }
 
-export default MainBlock;
+export default memo(MainBlock);

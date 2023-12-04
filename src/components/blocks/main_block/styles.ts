@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import Container from "/src/components/ui/container/container";
+import Container from "../../ui/container/container";
 
-import backMobile from "/src/assets/bg_mobile.png";
-import backMobile2x from "/src/assets/bg_mobile@2x.png";
+import backMobile from "../../../assets/bg_mobile.png";
+import backMobile2x from "../../../assets/bg_mobile@2x.png";
 import backMobile2xWebp from "/src/assets/bg_mobile@2x.webp";
 
-import * as M from "/src/style/mixins";
+import * as M from "../../../styles/mixins";
 
 export const MainStyle = styled.section`
   width: 100%;
@@ -192,7 +192,7 @@ export const Item = styled.li`
 export const Button = styled.button`
   width: 87.7%;
   border: none;
-  padding: 21px;
+  padding: 20px;
   background-color: ${props => props.theme.colorBlue};
 
   ${M.Inter500};
@@ -203,13 +203,20 @@ export const Button = styled.button`
   cursor: pointer;
   user-select: none;
 
-  &:hover,
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 1s;
+    }
+  }
+
   &:focus {
     opacity: 0.7;
   }
 
   &:active {
     background-color: ${props => props.theme.colorPurple};
+    transition: background-color 1s;
   }
 
   @media(max-width: 47.94em) {

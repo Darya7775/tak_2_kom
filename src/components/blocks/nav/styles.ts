@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as M from "/src/style/mixins";
+import * as M from "../../../styles/mixins";
 
 export const NavStyle = styled.nav`
   width: 100%;
@@ -46,14 +46,7 @@ export const LinkStyle = styled.a`
   ${M.Inter500};
   line-height: 19px;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    color: ${(props) => props.theme.colorPurple};
-  }
+  ${M.itemState};
 
   @media(max-width: 63.94em) {
     font-size: 14px;

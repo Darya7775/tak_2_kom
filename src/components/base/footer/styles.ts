@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import Container  from "/src/components/ui/container/container";
-import * as M from "/src/style/mixins";
+import Container  from "../../ui/container/container";
+import * as M from "../../../styles/mixins";
 
 const footerList = css`
   margin: 0;
@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
     line-height: 17px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: $color-gray;
+    color: ${props => props.theme.colorGray};
 
     @media(max-width: 47.94em) {
       font-size: 12px;
@@ -89,7 +89,7 @@ export const ListMenu = styled.ul`
 
   display: grid;
   grid-template-columns: 39% 1fr;
-  row-gap: 5px;
+  row-gap: 3px;
 
   @media(max-width: 47.94em) {
     grid-template-columns: 42% 1fr;
@@ -103,14 +103,7 @@ export const LinkFooter = styled.a`
 
   display: inline-flex;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    color: ${props => props.theme.colorPurple};
-  }
+  ${M.itemState};
 
   @media(max-width: 47.94em) {
     font-size: 14px;
@@ -140,14 +133,7 @@ export const WrapperTel = styled.div`
 export const Tel = styled.a`
   letter-spacing: 0.06em;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    color: ${props => props.theme.colorPurple};
-  }
+  ${M.itemState};
 
   @media(max-width: 47.94em) {
     letter-spacing: 0.05em;

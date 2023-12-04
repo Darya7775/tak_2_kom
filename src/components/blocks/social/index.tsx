@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import Telegram from "/src/assets/svg/telegram.svg";
 import Viber from "/src/assets/svg/viber.svg";
 import Whatsapp from "/src/assets/svg/whatsapp.svg";
-import { SocialStyle, LinkSocial } from "./style";
+import { SocialStyle, LinkSocial } from "./styles";
 
 interface Props {
   social: {
@@ -45,4 +45,4 @@ const Social: React.FC<Props> = ({ social }: Props) => {
   );
 }
 
-export default Social;
+export default memo(Social);

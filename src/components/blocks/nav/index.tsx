@@ -1,5 +1,5 @@
-import React from "react";
-import { NavStyle, NavListStyle, LinkStyle } from "./style";
+import React, { memo } from "react";
+import { NavStyle, NavListStyle, LinkStyle } from "./styles";
 
 const Nav: React.FC = () => {
   return(
@@ -25,4 +25,4 @@ const Nav: React.FC = () => {
   );
 }
 
-export default Nav;
+export default memo(Nav);

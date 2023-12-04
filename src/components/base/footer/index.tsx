@@ -1,7 +1,7 @@
 import React from "react";
-import { useMactchMedia } from "../../../hooks/use-match-media";
+import useMactchMedia from "../../../hooks/use-match-media";
 import Social from "../../blocks/social";
-import * as S from "./style";
+import * as S from "./styles";
 
 interface Social {
   telegram: {
@@ -53,38 +53,71 @@ const Footer: React.FC = () =>  {
         </S.Wrapper>
         <S.Wrapper>
           <h3>Меню</h3>
-          <S.ListMenu>
-            <li>
-              <S.LinkFooter href="#">Расчёт стоимости</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Благодарственные письма</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Услуги</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Кейсы</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Виджеты</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Сертификаты</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Интеграции</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Блог на Youtube</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Наши клиенты</S.LinkFooter>
-            </li>
-            <li>
-              <S.LinkFooter href="#">Вопрос / Ответ</S.LinkFooter>
-            </li>
-          </S.ListMenu>
+          {isMobile
+            ? <S.ListMenu>
+                <li>
+                  <S.LinkFooter href="#">Расчёт стоимости</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Благодарность клиентов</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Услуги</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Кейсы</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Виджеты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Сертификаты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Интеграции</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Блог на Youtube</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Наши клиенты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Вопрос / Ответ</S.LinkFooter>
+                </li>
+              </S.ListMenu>
+            : <S.ListMenu>
+                <li>
+                  <S.LinkFooter href="#">Расчёт стоимости</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Кейсы</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Услуги</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Благодарственные письма</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Виджеты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Сертификаты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Интеграции</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Блог на Youtube</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Наши клиенты</S.LinkFooter>
+                </li>
+                <li>
+                  <S.LinkFooter href="#">Вопрос / Ответ</S.LinkFooter>
+                </li>
+              </S.ListMenu>}
         </S.Wrapper>
         <S.WrapperContacts>
           <h3>Контакты</h3>

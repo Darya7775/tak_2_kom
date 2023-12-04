@@ -2,7 +2,7 @@ import React from "react";
 import LogoImg from "/src/assets/svg/logo_welbex.svg";
 import Nav from "../../blocks/nav";
 import Social from "../../blocks/social";
-import * as S from "./style";
+import * as S from "./styles";
 
 const Header: React.FC = () => {
   const social = {

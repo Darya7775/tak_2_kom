@@ -1,28 +1,30 @@
 import { useState, useLayoutEffect } from "react";
 
 const queries = [
-  '(max-width: 48em)',
-  '(max-width: 64em)',
-  '(min-width: 64em)',
+  "(max-width: 47.97em)",
+  "(min-width: 47.97em)",
+  "(min-width: 63.97em)",
 ];
 
-export const useMactchMedia = () => {
+const useMactchMedia = () => {
   const mediaQueryLists = queries.map(query => matchMedia(query));
 
   const getValues = () => mediaQueryLists.map(mq1 => mq1.matches);
 
-  const [values, setValues] = useState(getValues);
+  const [ values, setValues ] = useState(getValues);
 
   useLayoutEffect(() => {
     const handler = () => setValues(getValues);
 
-    mediaQueryLists.forEach(mq1 => mq1.addEventListener('change', handler));
+    mediaQueryLists.forEach(mq1 => mq1.addEventListener("change", handler));
 
-    return () => mediaQueryLists.forEach(mq1 => mq1.removeEventListener('change', handler));
+    return () => mediaQueryLists.forEach(mq1 => mq1.removeEventListener("change", handler));
   });
 
-  return ['isMobile', 'isTablet', 'isDesktop'].reduce((acc, screen, index) => ({
+  return [ "isMobile", "isTablet", "isDesktop" ].reduce((acc, screen, index) => ({
     ...acc,
     [screen]: values[index],
   }), {});
 };
+
+export default useMactchMedia;

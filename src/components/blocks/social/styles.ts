@@ -12,7 +12,13 @@ export const SocialStyle = styled.ul`
 `;
 
 export const LinkSocial = styled.a`
-  &:hover,
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 1s;
+    }
+  }
+
   &:focus {
     opacity: 0.7;
   }

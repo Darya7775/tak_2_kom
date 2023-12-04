@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Container from "/src/components/ui/container/container";
-import * as M from "/src/style/mixins";
+import Container from "../../ui/container/container";
+import * as M from "../../../styles/mixins";
 
 export const HeaderStyle = styled.header`
   width: 100%;
@@ -13,7 +13,7 @@ export const ContainerStyle = styled(Container)`
   display: grid;
   grid-template-columns: 15.2% 1fr 16% 11%;
 
-  padding-top: 57px;
+  padding-top: 60px;
   padding-bottom: 50px;
   gap: 20px;
 
@@ -97,12 +97,5 @@ export const TelStyle = styled.a`
   ${M.Inter500};
   line-height: 19px;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    color: ${(props) => props.theme.colorPurple};
-  }
+  ${M.itemState};
 `;
