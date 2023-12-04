@@ -117,7 +117,8 @@ const Footer: React.FC = () =>  {
                 <li>
                   <S.LinkFooter href="#">Вопрос / Ответ</S.LinkFooter>
                 </li>
-              </S.ListMenu>}
+              </S.ListMenu>
+          }
         </S.Wrapper>
         <S.WrapperContacts>
           <h3>Контакты</h3>
